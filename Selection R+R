@@ -1,0 +1,164 @@
+#Reading and Research - Selection Statements
+
+These tasks are designed to introduce you to the programming topic we will be studying in class next lesson. You **must** complete these activities prior to the lesson.
+
+##Boolean Expressions
+One of the most common tasks in computer programming is to **evaluate an expression**. An expression allows us to test whether a value (or set of values) meets particular criteria. The Python shell can evaluate expressions, we will use this to investigate expressions further.
+
+###Task 1
+Use the Python shell to investigate the expressions given below, describe what each symbol represents and indicate whether the expression evaluates to `True` or `False`.
+
+![](https://www.dropbox.com/s/2yaariz84s3kf5z/task_one.jpg?dl=1)
+
+|Expression|Symbol description|Result|
+|:--------:|------------------|------|
+|`2 == 4`|*equals*|`False`|
+|`5 > 3`|*Greater Than* |`True` |
+|`4 >= 4`|*Greater Than or Euqal To* |`True` |
+|`3 < 2`|*Less Than* |`False` |
+|`7 <= 7`|*Less Than or Equal To* |`True` |
+|`8 != 9`|*Values not equal* |`True` |
+
+The symbols in **Task 1** are called **relational operators** and when an expression containing a relational operator is evaluated it returns a **boolean value** (True or False) as an answer.
+
+
+In addition to evaluating expressions containing numbers we can also use **variables** in expressions. For example, imagine we had the following variable:
+
+```python
+test_score = 56
+```
+
+We could use boolean expressions to evaluate whether testScore meets certain criteria (for example whether it is greater than the pass mark of 50). Let’s test this out:
+
+###Task 2
+Enter `testScore = 56` into the Python shell and then investigate the expressions below.
+
+![](https://www.dropbox.com/s/9mh1ob3uxqdhvz0/task_two.png?dl=1)
+
+
+|Expression|Symbol description|Result|
+|:--------:|------------------|------|
+|`test_score == 50`|*Equals*|`False`|
+|`test_score > 40`|*Greater than* |`True` |
+|`test_score >= 60`|*Less than or equal to* |`False` |
+|`test_score < 40`|*Less Than* |`False` |
+|`50 <= test_score`|*Greater or equal to 50* |`True` |
+|`56 != test_score`|*Not Equal to* |`False` |
+
+##More complex boolean expressions
+Sometimes it is not enough to evaluate an expression on a single criteria. We can create more complicated boolean expressions using boolean operators. There are three boolean operators that we must consider in programming:
+
+|Operator|
+|:------:|
+|`and`|
+|`or`|
+|`not`|
+
+The `and` and `or` operators can be used to join expressions together into more complex expressions. The `not` operator is used to invert an expressions evaluation. For example if an expression evaluated to `True` using the `not` operator would make the result equal `False`.
+
+###Task 3
+Let’s look at some straightforward examples. Use the Python shell to evaluate the following expressions:
+
+|Expression|Result|
+|:--------:|------|
+|`True and True`|`True`|
+|`True and False`|`False` |
+|`False and True`|`False` |
+|`False and False`|`False`|
+|`True or True`|`true` |
+|`True or False`|`true` |
+|`False or True`|`true` |
+|`False or False`|`False` |
+|`not(True)`|`False` |
+|`not(False)`|`False` |
+
+Having completed the above table, use the space below to describe when `and` and `or` evaluate to `True`:
+
+|Operator|When it evaluates to `True`|
+|:------:|---------------------------|
+|`and`|*Needs Both to be true for True to be the outcome* |
+|`or`|*Needs only one to be true for true to be the outcome* |
+
+##Selection statements
+Before we find out more about selection statements let look at an example:
+
+```python
+test_score = 56
+if test_score >= 50:
+    print("Pass")
+if test_score < 50:
+    print("Fail")
+```
+
+###Task 4
+Without entering the code into Python, attempt to explain what the code does, using the space below for your answer:
+
+|answer|
+|------|
+|*Evaluates the variable "test_score"(which is has been assigned to the number 56) against two boolean expressions, >= which is greater than or equal to or < which is less than. only one of the selection statements will produce a true statment and it will print either "Pass" or "Fail". Because the test score is 56 which will produce a true response from the first selection statement the output will print "Pass".*|
+
+
+Now that we have looked at an example it is time to investigate selection statements in more detail. We will use the  [Python School website](http://www.pythonschool.net) to do this.
+
+###Task 5
+Read the following two pages on Python Summer School and attempt the exercises mentioned.
+
+1. [The IF Statement in Python](http://pythonschool.github.io/basics/the-if-statement/)
+    - The exercise at the bottom of the page
+2. [More on IF Statements in Python](http://pythonschool.github.io/basics/more-on-if/)
+    - The **first** exercise at the bottom of the page
+
+###Task 6
+In the space below **paste** the code from each of the exercises in Task 5 and include a screenshot of you running each program successfully.
+
+```python
+#task 5.1
+age = int(input("Please enter your age: "))
+
+if age >= 18:
+    print("You are old enough to vote")
+
+if age < 18:
+    print("You are not old enough to vote")
+
+retire_age = 65-age
+
+print("You have {0} years before you can retire".format(retire_age))
+
+
+```
+
+![Screenshot of task 5.1](https://www.dropbox.com/s/fqaoc2996ptxc7q/Voting%20Age%20Capture.PNG?dl=1)
+
+```python
+#task 5.2
+team1 = input("Please enter the name of the first team: ")
+
+score1 = int(input("Please enter the score of the first team: "))
+
+team2 = input("Please enter the name of the second team: ")
+
+score2 = int(input("Please enter the score of the second team: "))
+
+if score1 > score2:
+         points1 = 3
+         points2 = 0
+
+elif score2 > score1:
+         points1 = 0
+         points2 = 3
+else:
+         points1 = 1
+         points2 = 2
+
+print("{0} has {1} points".format(team1, points1))
+
+print("{0} has {1} points".format(team2, points2))
+```
+
+![Screenshot of task 5.2](https://www.dropbox.com/s/he8s9klf69p9d0f/Football%20Scores.PNG?dl=1)
+
+##Summary
+In this R&R you have investigated selection statements. You have seen how expressions are constructed from relational operators and boolean operators. You have have seen the structure and syntax of a basic selection statement and had the opportunity to create programs that use this statement.
+
+Please make sure you have completed this R&R fully before your next programming lesson as it will form the basis of the initial classroom discussion and starter tasks.
