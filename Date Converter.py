@@ -2,9 +2,9 @@
 #30/09/2014
 #Date Converter
 
-date= input("Please enter the date in the form; ##/##/##(I.E 02/12/98): ")
+date= input("Please enter the date in the form; ##/##/##(I.E 02/12/1998): ")
 
-day_number= date[0:3]
+day_number= date[0:2]
 
 month_number = date[3:5]
 
@@ -46,11 +46,6 @@ elif month_number == "12":
 else:
     print("That is an invalid Number-Please try again")
 
-year_number = date[6:]
+year = date[6:]
 
-if year_number > 29 and year_number < 99:
-    year = "19{0}".format(year_number)
-elif year number < 30:
-    year = "20{0}".format(year_number)
-
-print("The date you entered is the {0}th {1} {
+print("The date you entered is the {0}th {1} {2}".format(day_number, month, year))
